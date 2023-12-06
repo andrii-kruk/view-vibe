@@ -1,8 +1,10 @@
 import { FC, lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
-const MainPage = lazy(() => import("@pages/MainPage/MainPage"));
-const SecondPage = lazy(() => import("@pages/SecondPage/SecondPage"));
+const HomePage = lazy(() => import("@pages/HomePage/HomePage"));
+const MoviesPage = lazy(() => import("@pages/MoviesPage/MoviesPage"));
+const SeriesPage = lazy(() => import("@pages/SeriesPage/SeriesPage"));
+const BookmarkedPage = lazy(() => import("@pages/BookmarkedPage/BookmarkedPage"));
 
 import { Layout } from "@components/index";
 
@@ -11,8 +13,10 @@ const App: FC = () => {
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<MainPage />} />
-          <Route path="second" element={<SecondPage />} />
+          <Route index element={<HomePage />} />
+          <Route path="movies" element={<MoviesPage />} />
+          <Route path="series" element={<SeriesPage />} />
+          <Route path="bookmarked" element={<BookmarkedPage />} />
         </Route>
       </Routes>
     </Suspense>

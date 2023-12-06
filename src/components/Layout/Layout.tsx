@@ -1,13 +1,11 @@
 import { FC } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import { Sidebar } from "@components/index";
 
 const Layout: FC = () => {
   return (
     <>
-      <header>
-        <Link to="/">Main</Link>
-        <Link to="/second">Second</Link>
-      </header>
+      <Sidebar />
       <main>
         <Outlet />
       </main>

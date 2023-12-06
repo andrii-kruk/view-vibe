@@ -8,7 +8,7 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter basename="/react-vite-template_ts">
+    <BrowserRouter basename="/view-vibe">
       <App />
     </BrowserRouter>
   </React.StrictMode>

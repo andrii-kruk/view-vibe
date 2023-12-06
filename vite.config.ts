@@ -12,5 +12,5 @@ export default defineConfig({
       "@pages": "/src/pages",
     },
   },
-  base: "/react-vite-template_ts/",
+  base: "/view-vibe/",
 });

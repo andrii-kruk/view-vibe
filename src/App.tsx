@@ -6,11 +6,11 @@ const MoviesPage = lazy(() => import("@pages/MoviesPage/MoviesPage"));
 const SeriesPage = lazy(() => import("@pages/SeriesPage/SeriesPage"));
 const BookmarkedPage = lazy(() => import("@pages/BookmarkedPage/BookmarkedPage"));
 
-import { Layout } from "@components/index";
+import { Layout, Loader } from "@components/index";
 
 const App: FC = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Loader color="#36d7b7" />}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />

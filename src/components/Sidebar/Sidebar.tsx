@@ -1,13 +1,25 @@
 import { FC } from "react";
+
 import Navbar from "./Navbar/Navbar";
-import ProfileLink from "./ProfileLink/ProfileLink";
+
+import { Avatar, Header, Logo, Wrapper } from "./Sidebar.styled";
+import { Link } from "react-router-dom";
+
+import sprite from "@assets/sprite.svg";
 
 const Sidebar: FC = () => {
   return (
-    <aside>
-      <Navbar />
-      <ProfileLink />
-    </aside>
+    <Header>
+      <Wrapper>
+        <Link to="/">
+          <Logo width="25" height="20">
+            <use href={sprite + "#icon-logo"}></use>
+          </Logo>
+        </Link>
+        <Navbar />
+        <Avatar to="/bookmarked">{/* <img src=""  /> */}</Avatar>
+      </Wrapper>
+    </Header>
   );
 };
 

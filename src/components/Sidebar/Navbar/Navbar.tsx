@@ -1,14 +1,32 @@
 import { FC } from "react";
-import { NavLink } from "react-router-dom";
+import { Icon, Nav, StyledNavLink } from "./Navbar.styled";
+
+import sprite from "@assets/sprite.svg";
 
 const Navbar: FC = () => {
   return (
-    <nav>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/movies">Movies</NavLink>
-      <NavLink to="/series">Series</NavLink>
-      <NavLink to="/bookmarked">Home</NavLink>
-    </nav>
+    <Nav>
+      <StyledNavLink to="/">
+        <Icon>
+          <use href={sprite + "#icon-windows"}></use>
+        </Icon>
+      </StyledNavLink>
+      <StyledNavLink to="/movies">
+        <Icon>
+          <use href={sprite + "#icon-film"}></use>
+        </Icon>
+      </StyledNavLink>
+      <StyledNavLink to="/series">
+        <Icon>
+          <use href={sprite + "#icon-tv"}></use>
+        </Icon>
+      </StyledNavLink>
+      <StyledNavLink to="/bookmarked">
+        <Icon>
+          <use href={sprite + "#icon-bookmark"}></use>
+        </Icon>
+      </StyledNavLink>
+    </Nav>
   );
 };
 

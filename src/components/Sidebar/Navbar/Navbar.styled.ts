@@ -10,6 +10,11 @@ export const Nav = styled.nav`
   @media screen and (min-width: 768px) {
     gap: 32px;
   }
+
+  @media screen and (min-width: 1440px) {
+    gap: 40px;
+    flex-direction: column;
+  }
 `;
 
 export const StyledNavLink = styled(NavLink)`
@@ -17,7 +22,11 @@ export const StyledNavLink = styled(NavLink)`
   height: 16px;
 
   &.active > svg {
-    fill: #ffffff;
+    fill: var(--fill-active);
+  }
+
+  &:hover > svg {
+    fill: var(--fill-active);
   }
 
   @media screen and (min-width: 768px) {
@@ -30,8 +39,10 @@ export const Icon = styled.svg`
   width: 16px;
   height: 16px;
 
-  fill: #5a698f;
+  fill: var(--fill);
   stroke: none;
+
+  transition: fill 200ms ease-in-out;
 
   @media screen and (min-width: 768px) {
     width: 20px;

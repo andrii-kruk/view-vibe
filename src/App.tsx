@@ -1,4 +1,4 @@
-import { FC, lazy } from "react";
+import { FC, lazy, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
 const HomePage = lazy(() => import("@pages/HomePage/HomePage"));
@@ -9,6 +9,11 @@ const BookmarkedPage = lazy(() => import("@pages/BookmarkedPage/BookmarkedPage")
 import { Layout } from "@components/index";
 
 const App: FC = () => {
+  useEffect(() => {
+    const body = document.querySelector("body");
+    body?.setAttribute("data-theme", "dark");
+  }, []);
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>

@@ -3,11 +3,15 @@ import styled from "styled-components";
 
 export const Header = styled.header`
   padding: 20px 16px;
-  background-color: #161d2f;
+  background-color: var(--header_bg-color);
 
   @media screen and (min-width: 768px) {
-    padding: 23px 24px;
-    background-color: #10141e;
+    padding: 24px;
+    background-color: var(--bg-color);
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 32px;
   }
 `;
 
@@ -25,15 +29,25 @@ export const Logo = styled.svg`
 `;
 
 export const Wrapper = styled.div`
+  position: relative;
+
   display: flex;
   align-items: center;
-  gap: 79px;
+  justify-content: space-between;
 
   @media screen and (min-width: 768px) {
-    background-color: #161d2f;
+    background-color: var(--header_bg-color);
     padding: 24px;
     border-radius: 10px;
     justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 32px 38px;
+    flex-direction: column;
+    justify-content: unset;
+    height: calc(100vh - 64px);
+    gap: 75px;
   }
 `;
 
@@ -46,5 +60,16 @@ export const Avatar = styled(Link)`
   @media screen and (min-width: 768px) {
     width: 32px;
     height: 32px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+
+    bottom: 32px;
+    left: 50%;
+
+    transform: translateX(-50%);
   }
 `;

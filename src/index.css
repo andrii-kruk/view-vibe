@@ -1,1 +1,127 @@
 @import "/node_modules/modern-normalize/modern-normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&display=swap");
+
+:root {
+  --family: "Outfit", sans-serif;
+  --fw-light: 300;
+  --fw-medium: 500;
+
+  --fs-mobile_sm: 12px;
+  --fs-mobile_md: 14px;
+  --fs-mobile_lg: 16px;
+  --fs-mobile_xlg: 20px;
+
+  --fs-tablet_sm: 13px;
+  --fs-tablet_md: 18px;
+  --fs-tablet_lg: 24px;
+  --fs-tablet_xlg: 32px;
+
+  --fs-desktop_sm: 15px;
+  --fs-desktop_md: 24px;
+  --fs-desktop_lg: 32px;
+}
+
+body[data-theme="dark"] {
+  --bg-color: #10141e;
+  --header_bg-color: #161d2f;
+  --title_color: #ffffff;
+  --text_color: hsl(0, 0%, 75%);
+  --fill: #5a698f;
+  --fill-active: #ffffff;
+}
+
+body[data-theme="light"] {
+  --bg-color: #f5f5f5;
+  --header_bg-color: #e0e0e0;
+  --title_color: #333333;
+  --text_color: hsl(0, 0%, 25%);
+  --fill: #646771;
+  --fill-active: #536cad;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-size: var(--fs-mobile_sm);
+  font-family: var(--family);
+  font-weight: var(--fw-light);
+}
+#root {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+
+main {
+  position: relative;
+
+  flex-grow: 1;
+
+  padding: 24px 0 60px 0;
+}
+
+h2 {
+  color: var(--title_color);
+  font-size: var(--fs-mobile_xlg);
+}
+
+h3 {
+  color: var(--title_color);
+  font-size: var(--fs-mobile_md);
+  font-weight: var(--fw-medium);
+}
+
+span {
+  color: var(--text_color);
+}
+
+button {
+  font-family: inherit;
+  font-weight: var(--fw-medium);
+
+  border: none;
+  background-color: transparent;
+  outline: none;
+
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: var(--fs-tablet_sm);
+  }
+
+  main {
+    padding: 10px 0 56px 0;
+  }
+
+  h2 {
+    font-size: var(--fs-tablet_xlg);
+  }
+
+  h3 {
+    font-size: var(--fs-tablet_md);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #root {
+    flex-direction: row;
+  }
+
+  body {
+    font-size: var(--fs-desktop_sm);
+  }
+
+  main {
+    padding: 52px 0 64px 0;
+  }
+
+  h2 {
+    font-size: var(--fs-desktop_lg);
+  }
+
+  h3 {
+    font-size: var(--fs-desktop_md);
+  }
+}

@@ -2,9 +2,13 @@ import { FC } from "react";
 
 const SeriesPage: FC = () => {
   return (
-    <section>
-      <h1>Series Page</h1>
-    </section>
+    <>
+      <section>
+        <h2>TV Series</h2>
+
+        <ul>{/* Series */}</ul>
+      </section>
+    </>
   );
 };
 

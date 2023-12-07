@@ -2,9 +2,13 @@ import { FC } from "react";
 
 const BookmarkedPage: FC = () => {
   return (
-    <section>
-      <h1>Bookmarked Page</h1>
-    </section>
+    <>
+      <section>
+        <h2>Bookmarked Movies</h2>
+
+        <ul>{/* Bookmarks */}</ul>
+      </section>
+    </>
   );
 };
 

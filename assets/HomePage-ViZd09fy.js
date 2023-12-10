@@ -1,1 +1,0 @@
-import{j as e}from"./index-kzuyDxL4.js";const n=()=>e.jsxs(e.Fragment,{children:[e.jsxs("section",{children:[e.jsx("h2",{children:"Trending"}),e.jsx("ul",{})]}),e.jsxs("section",{children:[e.jsx("h2",{children:"Recommended for you"}),e.jsx("ul",{})]})]});export{n as default};

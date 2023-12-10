@@ -10,7 +10,9 @@ export default defineConfig({
       "@assets": "/src/assets",
       "@components": "/src/components",
       "@pages": "/src/pages",
+      "@http": "/src/http",
+      "@utils": "/src/utils",
     },
   },
-  base: "/view-vibe/",
+  base: "/view-vibe",
 });

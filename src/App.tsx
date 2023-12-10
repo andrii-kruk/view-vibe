@@ -1,12 +1,12 @@
 import { FC, lazy, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
-const HomePage = lazy(() => import("@pages/HomePage/HomePage"));
-const MoviesPage = lazy(() => import("@pages/MoviesPage/MoviesPage"));
-const SeriesPage = lazy(() => import("@pages/SeriesPage/SeriesPage"));
-const BookmarkedPage = lazy(() => import("@pages/BookmarkedPage/BookmarkedPage"));
+const HomePage = lazy(() => import("src/pages/HomePage/HomePage"));
+const MoviesPage = lazy(() => import("src/pages/MoviesPage/MoviesPage"));
+const SeriesPage = lazy(() => import("src/pages/SeriesPage/SeriesPage"));
+const BookmarkedPage = lazy(() => import("src/pages/BookmarkedPage/BookmarkedPage"));
 
-import { Layout } from "@components/index";
+import { Layout } from "src/components";
 
 const App: FC = () => {
   useEffect(() => {

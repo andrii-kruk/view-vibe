@@ -11,7 +11,7 @@
   --fs-mobile_lg: 16px;
   --fs-mobile_xlg: 20px;
 
-  --fs-tablet_sm: 13px;
+  --fs-tablet_sm: 15px;
   --fs-tablet_md: 18px;
   --fs-tablet_lg: 24px;
   --fs-tablet_xlg: 32px;
@@ -44,6 +44,7 @@ body {
   font-size: var(--fs-mobile_sm);
   font-family: var(--family);
   font-weight: var(--fw-light);
+  color: var(--text_color);
 }
 
 #root {
@@ -53,6 +54,10 @@ body {
   min-height: 100vh;
 }
 
+a {
+  text-decoration: none;
+  color: var(--text_color);
+}
 main {
   position: relative;
 
@@ -82,16 +87,13 @@ h2 {
   font-size: var(--fs-mobile_xlg);
   font-weight: var(--fw-light);
   letter-spacing: -0.3px;
+  margin-bottom: 16px;
 }
 
 h3 {
   color: var(--title_color);
   font-size: var(--fs-mobile_md);
   font-weight: var(--fw-medium);
-}
-
-span {
-  color: var(--text_color);
 }
 
 button {
@@ -116,12 +118,12 @@ button {
 
   h2 {
     font-size: var(--fs-tablet_xlg);
-  letter-spacing: -0.5px;
-
+    letter-spacing: -0.5px;
+    margin-bottom: 24px;
   }
 
   h3 {
-    font-size: var(--fs-tablet_md);
+    font-size: var(--fs-tablet_lg);
   }
 }
 
@@ -140,6 +142,7 @@ button {
 
   h2 {
     font-size: var(--fs-desktop_lg);
+    margin-bottom: 32px;
   }
 
   h3 {

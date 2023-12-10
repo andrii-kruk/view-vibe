@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Icon, Nav, StyledNavLink } from "./Navbar.styled";
 
-import sprite from "@assets/sprite.svg";
+import sprite from "src/assets/sprite.svg";
 
 const Navbar: FC = () => {
   return (

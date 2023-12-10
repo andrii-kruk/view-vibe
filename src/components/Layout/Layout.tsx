@@ -1,6 +1,6 @@
 import { FC, Suspense } from "react";
 import { Outlet } from "react-router-dom";
-import { Container, Loader, Sidebar } from "@components/index";
+import { Container, Loader, Sidebar } from "src/components";
 
 const Layout: FC = () => {
   return (

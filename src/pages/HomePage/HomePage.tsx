@@ -1,17 +1,18 @@
 import { FC } from "react";
+import { Trends } from "src/components";
+import { Section } from "./HomePage.styled";
 
 const HomePage: FC = () => {
   return (
     <>
-      <section>
+      <Section>
         <h2>Trending</h2>
-
-        <ul>{/* Trends */}</ul>
-      </section>
-      <section>
+        <Trends />
+      </Section>
+      <Section>
         <h2>Recommended for you</h2>
         <ul>{/* Recommends */}</ul>
-      </section>
+      </Section>
     </>
   );
 };

@@ -5,7 +5,7 @@ import Navbar from "./Navbar/Navbar";
 import { Avatar, Header, Logo, Wrapper } from "./Sidebar.styled";
 import { Link } from "react-router-dom";
 
-import sprite from "@assets/sprite.svg";
+import sprite from "src/assets/sprite.svg";
 
 const Sidebar: FC = () => {
   return (

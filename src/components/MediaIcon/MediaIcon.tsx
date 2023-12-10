@@ -9,10 +9,10 @@ type PropsMediaIcon = {
 };
 
 const MediaIcon: FC<PropsMediaIcon> = ({ type }) => {
-  const iconPath = type === "movie" ? sprite + "#icon-film" : sprite + "#icon-tv";
+  const iconId = type === "movie" ? "icon-film" : "icon-tv";
   return (
     <Icon>
-      <use href={iconPath}></use>
+      <use xlinkHref={`${sprite}#${iconId}`} />
     </Icon>
   );
 };

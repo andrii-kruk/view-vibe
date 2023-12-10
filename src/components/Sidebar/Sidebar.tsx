@@ -13,7 +13,7 @@ const Sidebar: FC = () => {
       <Wrapper>
         <Link to="/">
           <Logo width="25" height="20">
-            <use href={sprite + "#icon-logo"}></use>
+            <use href={sprite + "#icon_logo"}></use>
           </Logo>
         </Link>
         <Navbar />

@@ -110,7 +110,7 @@ Error generating stack: `+i.message+`
     width: 20px;
     height: 20px;
   }
-`,Bv=()=>j.jsxs(Uv,{children:[j.jsx(Ro,{to:"/",children:j.jsx(No,{children:j.jsx("use",{href:"/src/assets/sprite.svg#icon-windows"})})}),j.jsx(Ro,{to:"/movies",children:j.jsx(No,{children:j.jsx("use",{href:"/src/assets/sprite.svg#icon-film"})})}),j.jsx(Ro,{to:"/series",children:j.jsx(No,{children:j.jsx("use",{href:"/src/assets/sprite.svg#icon-tv"})})}),j.jsx(Ro,{to:"/bookmarked",children:j.jsx(No,{children:j.jsx("use",{href:"/src/assets/sprite.svg#icon-bookmark"})})})]}),Wv=ie.header`
+`,Bv=()=>j.jsxs(Uv,{children:[j.jsx(Ro,{to:"/",children:j.jsx(No,{children:j.jsx("use",{href:"/view-vibe/src/assets/sprite.svg#icon-windows"})})}),j.jsx(Ro,{to:"/movies",children:j.jsx(No,{children:j.jsx("use",{href:"/view-vibe/src/assets/sprite.svg#icon-film"})})}),j.jsx(Ro,{to:"/series",children:j.jsx(No,{children:j.jsx("use",{href:"/view-vibe/src/assets/sprite.svg#icon-tv"})})}),j.jsx(Ro,{to:"/bookmarked",children:j.jsx(No,{children:j.jsx("use",{href:"/view-vibe/src/assets/sprite.svg#icon-bookmark"})})})]}),Wv=ie.header`
   padding: 20px 16px;
   background-color: var(--header_bg-color);
 
@@ -175,7 +175,7 @@ Error generating stack: `+i.message+`
 
     transform: translateX(-50%);
   }
-`,Kv=()=>j.jsx(Wv,{children:j.jsxs(Hv,{children:[j.jsx(Qu,{to:"/",children:j.jsx(Vv,{width:"25",height:"20",children:j.jsx("use",{href:"/src/assets/sprite.svg#icon_logo"})})}),j.jsx(Bv,{}),j.jsx(Qv,{to:"/bookmarked"})]})});var Gv={cm:!0,mm:!0,in:!0,px:!0,pt:!0,pc:!0,em:!0,ex:!0,ch:!0,rem:!0,vw:!0,vh:!0,vmin:!0,vmax:!0,"%":!0};function Jv(e){if(typeof e=="number")return{value:e,unit:"px"};var t,n=(e.match(/^[0-9.]*/)||"").toString();n.includes(".")?t=parseFloat(n):t=parseInt(n,10);var r=(e.match(/[^0-9]*$/)||"").toString();return Gv[r]?{value:t,unit:r}:(console.warn("React Spinners: ".concat(e," is not a valid css value. Defaulting to ").concat(t,"px.")),{value:t,unit:"px"})}function zc(e){var t=Jv(e);return"".concat(t.value).concat(t.unit)}var Yv=function(e,t,n){var r="react-spinners-".concat(e,"-").concat(n);if(typeof window>"u"||!window.document)return r;var o=document.createElement("style");document.head.appendChild(o);var i=o.sheet,l=`
+`,Kv=()=>j.jsx(Wv,{children:j.jsxs(Hv,{children:[j.jsx(Qu,{to:"/",children:j.jsx(Vv,{width:"25",height:"20",children:j.jsx("use",{href:"/view-vibe/src/assets/sprite.svg#icon_logo"})})}),j.jsx(Bv,{}),j.jsx(Qv,{to:"/bookmarked"})]})});var Gv={cm:!0,mm:!0,in:!0,px:!0,pt:!0,pc:!0,em:!0,ex:!0,ch:!0,rem:!0,vw:!0,vh:!0,vmin:!0,vmax:!0,"%":!0};function Jv(e){if(typeof e=="number")return{value:e,unit:"px"};var t,n=(e.match(/^[0-9.]*/)||"").toString();n.includes(".")?t=parseFloat(n):t=parseInt(n,10);var r=(e.match(/[^0-9]*$/)||"").toString();return Gv[r]?{value:t,unit:r}:(console.warn("React Spinners: ".concat(e," is not a valid css value. Defaulting to ").concat(t,"px.")),{value:t,unit:"px"})}function zc(e){var t=Jv(e);return"".concat(t.value).concat(t.unit)}var Yv=function(e,t,n){var r="react-spinners-".concat(e,"-").concat(n);if(typeof window>"u"||!window.document)return r;var o=document.createElement("style");document.head.appendChild(o);var i=o.sheet,l=`
     @keyframes `.concat(r,` {
       `).concat(t,`
     }
@@ -308,7 +308,7 @@ Error generating stack: `+i.message+`
   margin-right: 6px;
 
   fill: var(--fill);
-`,x1=P.lazy(()=>Gi(()=>import("./HomePage-pgY6EpEm.js"),__vite__mapDeps([]))),E1=P.lazy(()=>Gi(()=>import("./MoviesPage-2V3wOcyi.js"),__vite__mapDeps([]))),k1=P.lazy(()=>Gi(()=>import("./SeriesPage-ZZVzTyd7.js"),__vite__mapDeps([]))),C1=P.lazy(()=>Gi(()=>import("./BookmarkedPage-nChwTzku.js"),__vite__mapDeps([]))),_1=()=>(P.useEffect(()=>{const e=document.querySelector("body");e==null||e.setAttribute("data-theme","dark")},[]),j.jsx(Sy,{children:j.jsxs(wn,{path:"/",element:j.jsx($y,{}),children:[j.jsx(wn,{index:!0,element:j.jsx(x1,{})}),j.jsx(wn,{path:"movies",element:j.jsx(E1,{})}),j.jsx(wn,{path:"series",element:j.jsx(k1,{})}),j.jsx(wn,{path:"bookmarked",element:j.jsx(C1,{})})]})}));Bl.createRoot(document.getElementById("root")).render(j.jsx(un.StrictMode,{children:j.jsx(Ry,{basename:"/view-vibe",children:j.jsx(_1,{})})}));export{R1 as B,P1 as C,T1 as D,A1 as I,Qu as L,j1 as O,L1 as S,I1 as T,N1 as a,O1 as b,z1 as f,j,P as r,ie as s};
+`,x1=P.lazy(()=>Gi(()=>import("./HomePage-kSoucbiG.js"),__vite__mapDeps([]))),E1=P.lazy(()=>Gi(()=>import("./MoviesPage-xzCXHbxQ.js"),__vite__mapDeps([]))),k1=P.lazy(()=>Gi(()=>import("./SeriesPage-BkpL4FwS.js"),__vite__mapDeps([]))),C1=P.lazy(()=>Gi(()=>import("./BookmarkedPage-LNGq1Vxi.js"),__vite__mapDeps([]))),_1=()=>(P.useEffect(()=>{const e=document.querySelector("body");e==null||e.setAttribute("data-theme","dark")},[]),j.jsx(Sy,{children:j.jsxs(wn,{path:"/",element:j.jsx($y,{}),children:[j.jsx(wn,{index:!0,element:j.jsx(x1,{})}),j.jsx(wn,{path:"movies",element:j.jsx(E1,{})}),j.jsx(wn,{path:"series",element:j.jsx(k1,{})}),j.jsx(wn,{path:"bookmarked",element:j.jsx(C1,{})})]})}));Bl.createRoot(document.getElementById("root")).render(j.jsx(un.StrictMode,{children:j.jsx(Ry,{basename:"/view-vibe",children:j.jsx(_1,{})})}));export{R1 as B,P1 as C,T1 as D,A1 as I,Qu as L,j1 as O,L1 as S,I1 as T,N1 as a,O1 as b,z1 as f,j,P as r,ie as s};
 function __vite__mapDeps(indexes) {
   if (!__vite__mapDeps.viteFileDeps) {
     __vite__mapDeps.viteFileDeps = []

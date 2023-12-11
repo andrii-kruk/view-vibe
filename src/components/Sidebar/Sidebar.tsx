@@ -5,7 +5,7 @@ import Navbar from "./Navbar/Navbar";
 import { Avatar, Header, Logo, Wrapper } from "./Sidebar.styled";
 import { Link } from "react-router-dom";
 
-import sprite from "src/assets/sprite.svg";
+// import sprite from "src/assets/sprite.svg";
 
 const Sidebar: FC = () => {
   return (
@@ -13,7 +13,7 @@ const Sidebar: FC = () => {
       <Wrapper>
         <Link to="/">
           <Logo width="25" height="20">
-            <use href={sprite + "#icon_logo"}></use>
+            <use href={"/src/assets/sprite.svg" + "#icon_logo"}></use>
           </Logo>
         </Link>
         <Navbar />

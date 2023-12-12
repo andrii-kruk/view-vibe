@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const TrendsList = styled.ul`
   display: flex;
   margin: 0;
-  width: calc(100vw - 30px);
+  width: 100%;
   gap: 16px;
   padding-bottom: 6px;
   overflow: auto;

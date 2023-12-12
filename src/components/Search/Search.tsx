@@ -1,40 +1,33 @@
-import { FC, ChangeEvent, useState, useMemo } from "react";
+import { FC, useMemo, useState } from "react";
 
-import { debounce } from "src/utils";
-import sprite from "src/assets/sprite.svg";
+import { MovieResponse } from "src/types";
+import { requestMoviesByName } from "src/http/movies-api";
 
-import { Input, SearchIcon, Wrapper } from "./Search.styled";
+import SearchBar from "./SearchBar/SearchBar";
+import { List } from "src/components";
 
 type PropsSearch = {
-  requestByQuery: (query: string) => Promise<void>;
-  placeholder: string
+  placeholder: string;
 };
 
-const Search: FC<PropsSearch> = ({ requestByQuery, placeholder }) => {
-  const [query, setQuery] = useState("");
+const Search: FC<PropsSearch> = ({ placeholder }) => {
+  const [searchedMovies, setSearchedMovies] = useState<MovieResponse[]>([]);
 
-  const onInputChange = (event: ChangeEvent<HTMLInputElement>): void => {
-    const value = event.target.value;
-    setQuery(value);
-
-    searching(value);
+  const searchMovies = async (query: string): Promise<void> => {
+    try {
+      const data = await requestMoviesByName(query);
+      setSearchedMovies(data.results);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  const searching = useMemo(
-    () =>
-      debounce((query) => {
-        requestByQuery(query);
-      }, 800),
-    []
-  );
-
+  const memoizedSearchedMovies = useMemo(() => searchedMovies, [searchedMovies]);
   return (
-    <Wrapper>
-      <SearchIcon>
-        <use href={sprite + "#icon-search"}></use>
-      </SearchIcon>
-      <Input type="text" placeholder={placeholder} value={query} onChange={onInputChange} />
-    </Wrapper>
+    <>
+      <SearchBar requestByQuery={searchMovies} placeholder={placeholder} />
+      <List items={memoizedSearchedMovies} />
+    </>
   );
 };
 

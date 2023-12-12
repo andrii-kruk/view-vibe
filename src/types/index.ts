@@ -29,3 +29,5 @@ export type Movie = {
   release_date: string | undefined;
   first_air_date?: string;
 };
+
+export type DebouncedFunction<T extends (...args: any[]) => void> = (...args: Parameters<T>) => void;

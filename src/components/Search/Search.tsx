@@ -1,11 +1,27 @@
-import { FC, ChangeEvent, useState } from "react";
+import { FC, ChangeEvent, useState, useMemo } from "react";
+import { debounce } from "src/utils";
 
-const Search: FC = () => {
+type PropsSearch = {
+  requestByQuery: (query: string) => Promise<void>;
+};
+
+const Search: FC<PropsSearch> = ({ requestByQuery }) => {
   const [query, setQuery] = useState("");
 
   const onInputChange = (event: ChangeEvent<HTMLInputElement>): void => {
-    setQuery(event.target.value);
+    const value = event.target.value;
+    setQuery(value);
+
+    searching(value);
   };
+
+  const searching = useMemo(
+    () =>
+      debounce((query) => {
+        requestByQuery(query);
+      }, 800),
+    []
+  );
 
   return <input type="text" placeholder="Search" value={query} onChange={onInputChange} />;
 };

@@ -24,7 +24,7 @@ const HomePage: FC = () => {
   return (
     <>
       <Section>
-        <Search requestByQuery={searchMovies} />
+        <Search placeholder="Search for movies or TV series" requestByQuery={searchMovies} />
       </Section>
       <Section>
         <h2>Trending</h2>

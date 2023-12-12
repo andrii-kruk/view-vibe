@@ -1,10 +1,13 @@
 import { FC } from "react";
-import { Trends } from "src/components";
+import { Search, Trends } from "src/components";
 import { Section } from "./HomePage.styled";
 
 const HomePage: FC = () => {
   return (
     <>
+      <Section>
+        <Search />
+      </Section>
       <Section>
         <h2>Trending</h2>
         <Trends />

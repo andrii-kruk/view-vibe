@@ -39,9 +39,8 @@ const Trends: FC = () => {
             release_date,
             first_air_date,
           }: Movie) => (
-            <Link to={`/movie/${id}`}>
+            <Link key={id} to={`/movie/${id}`}>
               <TrendCard
-                key={id}
                 adult={adult}
                 backdrop_path={backdrop_path}
                 id={id}

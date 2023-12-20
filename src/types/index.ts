@@ -23,7 +23,7 @@ export type Movie = {
   adult: boolean;
   backdrop_path: string;
   id: number;
-  media_type: "movie" | "tv";
+  media_type: "movie" | "tv" | "Unknown";
   original_title: string;
   original_name?: string;
   release_date: string | undefined;

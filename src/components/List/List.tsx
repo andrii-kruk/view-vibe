@@ -11,13 +11,23 @@ type PropsList = {
 };
 
 const List: FC<PropsList> = ({ items }) => {
+  console.log("items: ", items);
   return (
     <MovieList>
-      {items.map((item) => (
-        <Link to={`/movie/${item.id}`} key={item.id}>
-          <Card />
-        </Link>
-      ))}
+      {items.map(
+        ({ id, adult, backdrop_path, media_type, original_name, original_title, release_date, first_air_date }) => (
+          <Link to={`/movie/${id}`} key={id}>
+            <Card
+              adult={adult}
+              backdrop_path={backdrop_path}
+              id={id}
+              media_type={media_type ? media_type : "Unknown"}
+              original_title={original_name || original_title}
+              release_date={release_date || first_air_date || "Unknown"}
+            />
+          </Link>
+        )
+      )}
     </MovieList>
   );
 };

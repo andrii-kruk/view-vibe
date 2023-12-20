@@ -4,3 +4,6 @@ export { default as Loader } from "./Loader/Loader";
 export { default as Container } from "./Container/Container";
 export { default as Trends } from "./Trends/Trends";
 export { default as MediaIcon } from "./MediaIcon/MediaIcon";
+export { default as Search } from "./Search/Search";
+export { default as Card } from "./Card/Card";
+export { default as List } from "./List/List";

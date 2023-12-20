@@ -12,7 +12,7 @@ const $movies_instance = axios.create({
 
 export const fetchTrending = async () => {
   const { data } = await $movies_instance.get("/trending/all/day");
-  console.log('data: ', data);
+  console.log("data: ", data);
   return data;
 };
 

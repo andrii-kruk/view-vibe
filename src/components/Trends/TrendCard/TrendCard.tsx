@@ -2,6 +2,7 @@ import { FC } from "react";
 
 import { MediaIcon } from "src/components";
 import { Movie } from "src/types";
+import defaultImage from "src/assets/default.png";
 
 import { capitalizeFirstLetter, showAgeRating, showOnlyYear } from "src/utils";
 
@@ -12,10 +13,12 @@ const TrendCard: FC<Movie> = ({ id, backdrop_path, original_title, release_date,
   const capitalizedMediaType = capitalizeFirstLetter(media_type);
   const ageRating = showAgeRating(adult);
 
+  const image = backdrop_path ? `https://www.themoviedb.org/t/p/w300/${backdrop_path}` : defaultImage;
+
   const details = [year, capitalizedMediaType, ageRating];
   return (
     <Card key={id}>
-      <BackdropImage src={`https://www.themoviedb.org/t/p/w300/${backdrop_path}`} alt={original_title} />
+      <BackdropImage src={image} alt={original_title} />
       <Overlay>
         <CardInfo>
           <CardDetails>

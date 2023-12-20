@@ -3,6 +3,8 @@ import { FC } from "react";
 import { MediaIcon } from "src/components";
 import { Movie } from "src/types";
 
+import defaultImage from "src/assets/default.png";
+
 import { capitalizeFirstLetter, showAgeRating, showOnlyYear } from "src/utils";
 
 const Card: FC<Movie> = ({ id, backdrop_path, original_title, media_type, release_date, adult }) => {
@@ -12,9 +14,11 @@ const Card: FC<Movie> = ({ id, backdrop_path, original_title, media_type, releas
 
   const details = [year, capitalizedMediaType, ageRating];
 
+  const image = backdrop_path ? `https://www.themoviedb.org/t/p/w300/${backdrop_path}` : defaultImage;
+
   return (
     <li key={id}>
-      <img src={`https://www.themoviedb.org/t/p/w300/${backdrop_path}`} alt={original_title} />
+      <img src={image} alt={original_title} />
       <div>
         <div>
           <div>

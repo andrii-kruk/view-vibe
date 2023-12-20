@@ -1,8 +1,6 @@
 import { ChangeEvent, FC, useMemo, useState } from "react";
-
-import { debounce } from "src/utils";
 import sprite from "src/assets/sprite.svg";
-
+import debounce from "lodash.debounce";
 import { Input, SearchIcon, Wrapper } from "./SearchBar.styled";
 
 type PropsSearch = {
@@ -13,20 +11,13 @@ type PropsSearch = {
 const SearchBar: FC<PropsSearch> = ({ requestByQuery, placeholder }) => {
   const [query, setQuery] = useState("");
 
+  const debouncedSearchMovies = useMemo(() => debounce(requestByQuery, 700), [requestByQuery]);
+
   const onInputChange = (event: ChangeEvent<HTMLInputElement>): void => {
-    const value = event.target.value;
-    setQuery(value);
-
-    searching(value);
+    const inputValue = event.target.value;
+    setQuery(inputValue);
+    debouncedSearchMovies(inputValue);
   };
-
-  const searching = useMemo(
-    () =>
-      debounce((query) => {
-        requestByQuery(query);
-      }, 800),
-    []
-  );
 
   return (
     <Wrapper>
